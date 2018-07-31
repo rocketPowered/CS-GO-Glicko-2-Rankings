@@ -50,6 +50,8 @@ A: This was written in Java, the only language I really know what I'm doing in
 
 A: Ideally I would like to incorperate this into a rankings website. I think this would mean storing data on players/teams using SQL and using something (python, php, idk) to calculate rankings every week. This would also probably require scraping data on matches for the week, and doing this automatically. This would require a lot of rewrites of my code and I wouldn't be able to use java anymore. I have no idea how to do any of that, so if you do let me know.
 
+On another note, there are two values in this system that are set based on your applicaiton. These values are Tau, and Volatility. These two values are set in this case to Tau = 0.5 and Volatility = 0.06. These values could be tweaked to be optimal for CS:GO, but I am not going to bother with that right now. If you want to do that or have any input on optimal values, let me know
+
 
 ### Q: I want to help/fix a bug/improve your code
 
