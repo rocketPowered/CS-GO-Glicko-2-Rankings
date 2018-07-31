@@ -40,6 +40,9 @@ A: If a team wins a bo3 2-0, I simulate that as the winning team winning 2 match
 
 A: I couldn't really figure out how rating decay factors in to the glicko-2 system. I assume that every rating period (maybe a week/month) you would scale down elo but the paper has no specifics on how this is done. I have to assume its either done implicitly in the algorithm (in which case I'm definitely decaying ratings way too often, as I update rating every match not every week), or not done at all in this system (in which case I don't have rating decay).
 
+### Q: What implicit assumptions do you make?
+
+A: I don't really deal with standins too well, or player breaks. For standins to work, I have to add that player to the team, and remove them when they are done. If they are taking the spot of another player for a tournament, that player will be removed from the team temporarily. Because of how I scale rating changes, a team must have 5 players to play a match. Also because I don't think I have rating decay, a player who goes on a break (i.e olof), will not decay rating while they are on break, even if they in theory should.
 
 ### Q: What language did you use?
 
