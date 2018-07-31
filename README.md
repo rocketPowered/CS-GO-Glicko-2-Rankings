@@ -36,6 +36,11 @@ A: No, this rating system does not take in to account personal performance, only
 A: If a team wins a bo3 2-0, I simulate that as the winning team winning 2 matches over the losing team. If a team won a bo3 2-1, I would simulate that as the winning team playing 3 matches, winning two and losing one. I have no clue if this is the best way to do things, but it's what I did. If you have an improvements let me know. I just did this because winning a bo3 or bo5 should be more impactful than winning a bo1.
 
 
+### Q: What about rating decay?
+
+A: I couldn't really figure out how rating decay factors in to the glicko-2 system. I assume that every rating period (maybe a week/month) you would scale down elo but the paper has no specifics on how this is done. I have to assume its either done implicitly in the algorithm (in which case I'm definitely decaying ratings way too often, as I update rating every match not every week), or not done at all in this system (in which case I don't have rating decay).
+
+
 ### Q: What language did you use?
 
 A: This was written in Java, the only language I really know what I'm doing in
