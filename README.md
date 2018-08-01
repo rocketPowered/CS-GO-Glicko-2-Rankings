@@ -31,6 +31,11 @@ A: I mean that if team A beats team B, I will simulate each player on team A bea
 A: No, this rating system does not take in to account personal performance, only wins and losses against other teams. For example, s1mple and zeus would have the same personal rating having played together for all of 2018, even though s1mple often has a much better personal performance.
 
 
+### Q: Does the final score (rounds) matter?
+
+A: No, it doesn't matter if a team wins 16-0, 16-14, or 22-20. A win is just counted as a win. I could maybe eventually adjust things so score increates or decreases elo gain, but that would be a different system and could give very different results.
+
+
 ### Q: How do you deal with bo1/bo3/bo5
 
 A: If a team wins a bo3 2-0, I simulate that as the winning team winning 2 matches over the losing team. If a team won a bo3 2-1, I would simulate that as the winning team playing 3 matches, winning two and losing one. I have no clue if this is the best way to do things, but it's what I did. If you have an improvements let me know. I just did this because winning a bo3 or bo5 should be more impactful than winning a bo1.
