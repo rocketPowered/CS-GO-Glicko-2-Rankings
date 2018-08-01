@@ -58,8 +58,12 @@ On another note, there are two values in this system that are set based on your 
 
 ### Q: I want to help/fix a bug/improve your code
 
-A: All of the source code I wrote is listed here, if you want to copy it and do your own thing feel free. If you would like to help this project, and help keep it optimized and working, send me a message on GitHub and we can figure out how to give you edit permissions or make any changes you feel would be beneficial
+A: All of the source code I wrote is listed here, if you want to copy it and do your own thing feel free (see below). If you would like to help this project, and help keep it optimized and working, send me a message on GitHub and we can figure out how to give you edit permissions or make any changes you feel would be beneficial
 
 ### Q: This code is bad/inneficient/what were you doing?
 
 A: I tried to comment anything that I felt wasn't clear. If you're confused by anything, I suggest you read the glicko-2 paper first and see if that helps at all. If you've done that and what I wrote still makes no sense, I'm sorry. I'm a math major, not a CS major so I have little experience actually writing optimized and efficient/smart code. Feel free to let me know of any improvements I can make
+
+### Q: Can I use this code for my own purposes?
+
+A: I mean all of the code is listed here, so you could really do whatever you want. However, please do not use this code anywhere without listing me and giving me credit. Also, nobody should use this for their own monetary gain. Don't make money off of anything I wrote here please.
