@@ -1,3 +1,4 @@
+import java.util.NoSuchElementException;
 
 public class Team {
     private Player[] players;
@@ -9,7 +10,6 @@ public class Team {
     public Team(String name) {
         players = new Player[5];
         this.name = name;
-
     }
 
     public Player[] getPlayers() {
@@ -30,11 +30,20 @@ public class Team {
 
     public void addPlayer(Player player) {
         int i = 0;
+        boolean placed = false;
         while (i < players.length) {
             if (players[i] == null) {
                 players[i] = player;
+                placed = true;
                 i = players.length;
             }
+            i++;
+        }
+        updateRating();
+        updateRd();
+
+        if (!placed) {
+            throw new NoSuchElementException();
         }
     }
 
@@ -45,7 +54,10 @@ public class Team {
                 players[i] = null;
                 i = players.length;
             }
+            i++;
         }
+        updateRating();
+        updateRd();
     }
 
     public void renameTeam(String name) {
@@ -61,7 +73,9 @@ public class Team {
     public void updateRating() {
         double temp = 0;
         for (int i = 0; i < players.length; i++) {
-            temp += players[i].getRating();
+            if (players[i] != null) {
+                temp += players[i].getRating();
+            }
         }
         rating = temp / players.length;
     }
@@ -69,7 +83,9 @@ public class Team {
     public void updateRd() {
         double temp = 0;
         for (int i = 0; i < players.length; i++) {
-            temp += players[i].getRd();
+            if (players[i] != null) {
+                temp += players[i].getRd();
+            }
         }
         rd = temp / players.length;
     }
@@ -89,8 +105,16 @@ public class Team {
     }
 
     public String toString() {
-        return name + ": rating = " + rating + ", rd = " + rd;
+        return name + ": (rating: " + Math.round(rating) + ")";//, rd = " + Math.round(rd);
     }
 
-
+    /*
+    Prints the player names on a team. Super useful for spotting roster changes when comparing to tournament roster
+    I basically just use this to see a teams roster if I think they made a change but I'm not sure
+     */
+    public void printPlayers() {
+        for (Player player : players) {
+            System.out.println(player);
+        }
+    }
 }

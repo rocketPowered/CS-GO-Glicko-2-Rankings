@@ -24,5 +24,11 @@ public class Match {
         for(Player player : lTeam) {
             g.glicko(player, wTeamCopy, 0);
         }
+
+        winningTeam.updateRating();
+        winningTeam.updateRd();
+
+        losingTeam.updateRating();
+        losingTeam.updateRd();
     }
 }

@@ -1,10 +1,10 @@
 public class Glicko {
     //tau helps determine how easily the rankings change based on results. Low tau = low swing on upsets
-    private static final double TAU = 0.5;
+    private static final double TAU = 1;
 
     //this factor is added to deal with the fact that players are playing on a team, so we will scale down
     //  any gains in elo to account for the fact that they are 1/5 of the performance
-    private static final double FACTOR = 0.2;
+    private static final double FACTOR = 1;
 
     //This value is the convergence tolerance, epsilon. We set this value to a small value,
     //  in this case the value is one suggested by the glicko-2 outline
@@ -95,6 +95,7 @@ public class Glicko {
         //5.5
         double newVol = Math.exp(bigA/2);
 
+
         //Step 6, update rating deviation to new pre-rating period value
         double rdStar = Math.sqrt(rdSquared + Math.pow(newVol,2));
 
@@ -113,6 +114,7 @@ public class Glicko {
         //Now we are done, so let's update the player in question's rating and rd
         p.setRating(newRating);
         p.setRd(newRd);
+
     }
 
     /*
@@ -124,7 +126,7 @@ public class Glicko {
     private double[] convertDoubles(Player p) {
         double[] converted = new double[3];
         converted[0] = (p.getRating()-1500)/MAGIC;
-        converted[3] = p.getRd()/MAGIC;
+        converted[1] = p.getRd()/MAGIC;
         converted[2] = p.getVolatilility();
         return converted;
     }
