@@ -23,7 +23,7 @@ This means that each player gets an individual ranking, and when two teams play 
 
 ### Q: What do you mean scale elo changes?
 
-A: I mean that if team A beats team B, I will simulate each player on team A beating every player on team B, and then take the change in elo and scale it by a factor (in this case 0.2) to account for the fact that team A has 5 players. This means a team the correct amount of elo, instead of (roughly) 5x what they should be.
+A: I mean that if team A beats team B, I will simulate each player on team A beating every player on team B, and then take the change in elo and scale it by a factor (in this case 0.85). I've adjusted this factor and looked at the results, and right now this seems to give the most accurate rankings, but this value can always be tweaked
 
 
 ### Q: Does individual performance matter?
@@ -65,7 +65,7 @@ On another note, there are two values in this system that are set based on your 
 
 A: All of the source code I wrote is listed here, if you want to copy it and do your own thing feel free (see below). If you would like to help this project, and help keep it optimized and working, send me a message on GitHub and we can figure out how to give you edit permissions or make any changes you feel would be beneficial
 
-### Q: This code is bad/inneficient/what were you doing?
+### Q: This code is bad/inefficient/what were you doing?
 
 A: I tried to comment anything that I felt wasn't clear. If you're confused by anything, I suggest you read the glicko-2 paper first and see if that helps at all. If you've done that and what I wrote still makes no sense, I'm sorry. I'm a math major, not a CS major so I have little experience actually writing optimized and efficient/smart code. Feel free to let me know of any improvements I can make
 
