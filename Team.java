@@ -105,7 +105,7 @@ public class Team {
     }
 
     public String toString() {
-        return name + ": (rating: " + Math.round(rating) + ")";//, rd = " + Math.round(rd);
+        return name + ": (rating: " + Math.round(rating) + ", rd = " + Math.round(rd) + ")";
     }
 
     /*
@@ -115,6 +115,12 @@ public class Team {
     public void printPlayers() {
         for (Player player : players) {
             System.out.println(player);
+        }
+    }
+
+    public void removeAll() {
+        for(int i = 0; i < players.length; i++) {
+            players[i] = null;
         }
     }
 }

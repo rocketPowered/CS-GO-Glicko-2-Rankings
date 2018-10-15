@@ -4,7 +4,7 @@ public class Glicko {
 
     //this factor is added to deal with the fact that players are playing on a team, so we will scale down
     //  any gains in elo to account for the fact that they are 1/5 of the performance
-    private static final double FACTOR = 1;
+    private static final double FACTOR = 0.85;
 
     //This value is the convergence tolerance, epsilon. We set this value to a small value,
     //  in this case the value is one suggested by the glicko-2 outline
